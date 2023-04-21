@@ -16,10 +16,25 @@ export const Form = (props: FormProps) => {
     const [email, setEmail] = useState(props.email);
     const [phone, setPhone] = useState(props.phone);
 
+    
+    // handle submit
+    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+    }
+
+    function clearForm () {
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPhone('');
+    }
+
+
+
     // return a form with input fields
     return (
        <div className="container">
-            <form className="form">
+            <form onSubmit={handleSubmit} className="form">
                 
                 <label>
                     First Name:
@@ -39,6 +54,7 @@ export const Form = (props: FormProps) => {
                     <input type="tel" value={phone} onChange={e => setPhone(e.target.value)}></input>
                 </label>
                     <button type="submit">Submit</button>
+                    <button onClick={clearForm}>Clear</button>
            </form>
 
        </div>
