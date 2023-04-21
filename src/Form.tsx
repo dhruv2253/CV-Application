@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import './Form.css'
 type FormProps = {
     firstName: string;
     lastName: string;
