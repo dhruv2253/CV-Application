@@ -9,12 +9,15 @@ type FormProps = {
 }
 
 export const Form = (props: FormProps) => {
+
+    // useStates of input fields
     const [firstName, setFirstName] = useState(props.firstName);
     const [lastName, setLastName] = useState(props.lastName);
     const [email, setEmail] = useState(props.email);
     const [phone, setPhone] = useState(props.phone);
 
     
+    // handle submit
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
     }
@@ -22,8 +25,11 @@ export const Form = (props: FormProps) => {
    
 
 
+    // return a form with input fields
     return (
+       
             <form onSubmit={handleSubmit} className="form">
+                
                 <label>
                     First Name:
                     <input type="text" value={firstName} onChange={e => setFirstName(e.target.value)}></input>
@@ -38,7 +44,7 @@ export const Form = (props: FormProps) => {
                     <input type="email" value={email} onChange={e => setEmail(e.target.value)}></input>
                 </label>
                 <label>
-                    Email:
+                    Phone:
                     <input type="tel" value={phone} onChange={e => setPhone(e.target.value)}></input>
                 </label>
                     <button type="submit">Submit</button>
