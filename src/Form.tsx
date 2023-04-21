@@ -27,7 +27,7 @@ export const Form = (props: FormProps) => {
 
     // return a form with input fields
     return (
-       
+       <div className="container">
             <form onSubmit={handleSubmit} className="form">
                 
                 <label>
@@ -49,6 +49,8 @@ export const Form = (props: FormProps) => {
                 </label>
                     <button type="submit">Submit</button>
            </form>
+
+       </div>
          
         )
 }
