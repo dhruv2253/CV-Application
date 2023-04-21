@@ -1,13 +1,9 @@
-/* make the form fit the whole page */
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    
+    display: flex;
+    justify-content: center;
     
 }
-
 form {
     display: flex;
     width: 60vw;
@@ -17,6 +13,7 @@ form {
     box-shadow: 0 4px 20px -2px rgb(22 22 22);
     margin-bottom: 20px;
     margin-top: 50px;
+    justify-content: center;
 
 }
 
@@ -26,7 +23,7 @@ label {
     width: 40%;
     padding: 10px;
     font-size: 16px;
-    color: black;
+    color: white;
     margin-left: 10px;
     font-weight: bold;
 }
@@ -48,6 +45,7 @@ input:focus {
 
 
 button {
+   
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
@@ -57,6 +55,8 @@ button {
     background-color: #1a1a1a;
     cursor: pointer;
     transition: border-color 0.25s;
+    margin-left: 15px;
+    margin-bottom: 15px;
   }
   button:hover {
     border-color: #646cff;
