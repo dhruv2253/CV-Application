@@ -16,19 +16,10 @@ export const Form = (props: FormProps) => {
     const [email, setEmail] = useState(props.email);
     const [phone, setPhone] = useState(props.phone);
 
-    
-    // handle submit
-    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        e.preventDefault();
-    }
-
-   
-
-
     // return a form with input fields
     return (
        <div className="container">
-            <form onSubmit={handleSubmit} className="form">
+            <form className="form">
                 
                 <label>
                     First Name:
